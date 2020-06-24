@@ -61,7 +61,7 @@ export default function App() {
             component={Participantes}
             //options={{ title: "Sobre Participantes" }} //Para pantalla estatica con name
             options={({ route }) => ({
-              title: route.params.clienteId,
+              title: "Activar/desactivar Participantes",
             })} //Para pantalla dinamica con parametros
           />
         </Stack.Navigator>

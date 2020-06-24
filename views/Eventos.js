@@ -39,10 +39,10 @@ const Eventos = ({ navigation, route }) => {
           estado: false,
         }),
       });
-      console.log(participante);
+      // console.log(participante);
       //guardarInputTexto("")
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 
@@ -57,7 +57,7 @@ const Eventos = ({ navigation, route }) => {
       // console.log(nombre); //muestra lo que hay en el storage
       guardarNombre(nombre);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
   const eliminarDatos = () => {
@@ -67,7 +67,7 @@ const Eventos = ({ navigation, route }) => {
       guardarNombre("");
       // console.log("En el localstorage hay" + nombre); //muestra lo que hay en el storage
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
   const volver = () => {
@@ -101,7 +101,9 @@ const Eventos = ({ navigation, route }) => {
   return (
     <View style={styles.container}>
       {error ? (
-        <p className="alerta-error">Todos los campos son obligatorios</p>
+        <Text style={styles.btnEliminar}>
+          Todos los campos son obligatorios
+        </Text>
       ) : null}
       <Text>Listado de Participantes</Text>
       {participante.objetosParticipantes ? (
@@ -157,7 +159,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   textoEliminar: {
-    color: "white",
+    color: "red",
+
     fontWeight: "bold",
     textAlign: "center",
     width: 300,

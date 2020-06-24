@@ -38,7 +38,7 @@ const Inicio = ({ navigation }) => {
       elemento["inputNombreEvento"] === nombre
         ? elemento["participante"].objetosParticipantes.forEach((elemento2) => {
             //console.log("elemento2")
-            console.log(elemento2);
+            //console.log(elemento2);
             if (elemento2.estado === true) {
               asistiran = asistiran + 1;
             }
@@ -52,9 +52,9 @@ const Inicio = ({ navigation }) => {
     try {
       /* setItem es clave valor */
       const longitud = await AsyncStorage.getItem("eventos");
-      console.log(JSON.parse(longitud).eventos.length); //muestra lo que hay en el storage
+      //console.log(JSON.parse(longitud).eventos.length); //muestra lo que hay en el storage
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
   const visitarNosotros = () => {
@@ -68,7 +68,7 @@ const Inicio = ({ navigation }) => {
     // console.log("log del name del evento"+nameEvent);
 
     guardarEventoClick(nameEvent);
-    console.log(eventoClick);
+    //console.log(eventoClick);
   };
 
   const visitarCrearEventos = () => {

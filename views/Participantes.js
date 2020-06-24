@@ -11,8 +11,8 @@ const Participantes = ({ navigation, route }) => {
   //console.log(route.params);
   //console.log("desde el participante"+eventoClick);
   const volver = () => {
-    guardarEventoClick("");
     navigation.navigate("Inicio");
+    guardarEventoClick("");
     //navigation.goBack(); //Sin importar la pagina, vuelve a la anterior
     //navigation.push("Inicio"); //haces las transiciones al reves
   };
@@ -65,7 +65,7 @@ console.log(eventos)*/
     <View style={styles.contenedor}>
       <Text>Participantes</Text>
 
-      {result[0].participante.objetosParticipantes ? (
+      {result[0] ? (
         result[0].participante.objetosParticipantes.map((item) => (
           <View>
             <Text>{item.nombre}</Text>
