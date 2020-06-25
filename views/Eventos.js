@@ -39,8 +39,9 @@ const Eventos = ({ navigation, route }) => {
           estado: false,
         }),
       });
+
       // console.log(participante);
-      //guardarInputTexto("")
+      guardarInputTexto("")
     } catch (error) {
       //console.log(error);
     }
@@ -117,6 +118,7 @@ const Eventos = ({ navigation, route }) => {
       <TextInput
         style={styles.input}
         placeholder="Ingresar Participante"
+        value={inputTexto}
         onChangeText={(texto) => guardarInputTexto(texto)}
       />
 
